@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import { deleteContact } from "redux/operations";
-import { selectError, selectVisibleContacts } from "redux/selectors";
+import { deleteContact } from "redux/contacts/operations";
+import { selectError, selectVisibleContacts } from "redux/contacts/selectors";
 import { DeleteBtn, List, WrapItem, Text, WrappText, IconClose, TitleList, TotalText } from "./ContactList.styled"
 import Error from '../Error';
 
@@ -17,12 +17,12 @@ const ContactList = () => {
       ? (<>
           <TotalText>Total contacts: {contacts.length}</TotalText>
     <List>
-      {contacts.map(({id, name, phone}) => (        
+      {contacts.map(({id, name, number}) => (        
         <li key={id}>
           <WrapItem>
             <WrappText>
             <Text>{name}</Text>
-            <Text> {phone}</Text>
+            <Text> {number}</Text>
            </WrappText>
             <DeleteBtn onClick={() => dispatch(deleteContact(id))}>
               <IconClose />

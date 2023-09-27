@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { setContactFilter } from "redux/contactSlice";
+import { setContactFilter } from "redux/contacts/contactSlice";
 import { InputFilter, TextFilter, TitleFilter } from "./Filter.styled";
 
 const Filter = () => { 

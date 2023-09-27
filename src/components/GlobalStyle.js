@@ -8,7 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
-  width: 400px;
+  /* width: 1000px; */
   margin: auto;    
   background: linear-gradient(to top, #09203f 0%, #537895 100%);
   background-attachment: fixed;
