@@ -8,9 +8,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
-  /* width: 1000px; */
+  /* max-width: 1200px; */
   margin: auto;    
-  background: linear-gradient(to top, #09203f 0%, #537895 100%);
+  /* background: linear-gradient(to top, #09203f 0%, #537895 100%); */
+ background: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
   background-attachment: fixed;
 }
 
@@ -21,5 +22,12 @@ code {
 
 div{
   margin: auto; 
+}
+
+img{  
+  display: block;
+  width: 100%;
+  height:100vh;
+  object-fit: fill;
 }
 `;

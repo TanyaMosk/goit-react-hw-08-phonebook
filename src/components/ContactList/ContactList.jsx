@@ -1,10 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { deleteContact, updateContact } from "redux/contacts/operations";
 import { selectError, selectVisibleContacts } from "redux/contacts/selectors";
-import { DeleteBtn, List, WrapItem, Text, WrappText, IconClose, TitleList, TotalText } from "./ContactList.styled"
+import { Btn, List, WrapItem, Text, WrappText, IconClose, TitleList, TotalText, FormInput, Form, ChangeBtn } from "./ContactList.styled"
 import { MdDriveFileRenameOutline } from "react-icons/md";
 import Error from '../Error';
 import { useState } from "react";
+import { FormLabel } from "@mui/material";
+
 
 const ContactList = () => {
   const dispatch = useDispatch();  
@@ -25,54 +27,55 @@ const ContactList = () => {
   }; 
   
   return (
-        <>
-      {error ? <Error/> : null}
-      {(contacts.length !== 0 )
-      ? (<>
+    <>
+      {error ? <Error /> : null}
+      {(contacts.length !== 0)
+        ? (<>
           <TotalText>Total contacts: {contacts.length}</TotalText>
-    <List>
-            {contacts.map(({ id, name, number }) => (         
-        <li key={id}>          
-          <WrapItem>
-            <WrappText>
-              <Text>{name}</Text>
-              <Text> {number}</Text>
-            </WrappText>
-            {changes === id ? (
-              <form key={id} onSubmit={(e) => handleChanges(e, id)} >
-                <label>               
-                  <input
-                    type="name"
-                    name="name"
-                    defaultValue={name}                    
-                  />
-                </label>
-                <label>               
-                  <input
-                    type="text"
-                    name="number"
-                    defaultValue={number}                
-                  />
-                </label>
-                <button >Change</button>
-              </form>
-            ) : (
-              <button onClick={() => setChanges(id)}>
-                <MdDriveFileRenameOutline/> 
-              </button>
-            )}
-            <DeleteBtn onClick={() => dispatch(deleteContact(id))}>
-              <IconClose />
-            </DeleteBtn>
-          </WrapItem>
-        </li>
-      ))}
-    </List>
-      </>)
+          <List>
+            {contacts.map(({ id, name, number }) => (
+              <li key={id}>
+                <WrapItem>
+                  {changes !== id ? (
+                    <>
+                      <WrappText>
+                        <Text>{name}</Text>
+                        <Text> {number}</Text>
+                      </WrappText>
+                      <Btn onClick={() => setChanges(id)}>
+                        <MdDriveFileRenameOutline />
+                      </Btn>
+                      <Btn onClick={() => dispatch(deleteContact(id))}>
+                        <IconClose />
+                      </Btn> </>)
+                    : (
+                      <Form key={id} onSubmit={(e) => handleChanges(e, id)} >
+                      <FormLabel>
+                        <FormInput
+                          type="name"
+                          name="name"
+                          defaultValue={name}
+                        />
+                      </FormLabel>
+                      <label>
+                        <FormInput
+                          type="text"
+                          name="number"
+                          defaultValue={number}
+                        />
+                      </label>
+                      <ChangeBtn type="submit">Change</ChangeBtn>
+                    </Form>)            
+                  }
+                </WrapItem>
+              </li>
+            ))}
+          </List>
+        </>)
         : (error ? null : <TitleList>Sorry, you have no saved contacts.</TitleList>)
-         }        
+      }
     </>
-  )
+  );
 };
 
 export default ContactList;

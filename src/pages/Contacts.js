@@ -1,3 +1,4 @@
+import { Container } from "@mui/material";
 import ContactForm from "components/ContactForm";
 import ContactList from "components/ContactList";
 import Filter from "components/Filter";
@@ -13,12 +14,12 @@ const Contacts = () => {
     }, [dispatch]);
 
     return (
-        <div>
-            <h1>Your contacts</h1>
+        <Container>
+            {/* <h1>Your contacts</h1> */}
             <ContactForm />
             <Filter/>
             <ContactList/>
-     </div>
+     </Container>
     )
 };
 

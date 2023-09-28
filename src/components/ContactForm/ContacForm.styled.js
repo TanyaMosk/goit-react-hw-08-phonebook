@@ -3,6 +3,7 @@ import { Form, Field, ErrorMessage } from 'formik';
 
 export const StyledForm = styled(Form)`
 background-color: transparent;
+max-width: 320px;
   margin: auto;
   padding: 20px;  
   border-radius: 10px;
@@ -19,13 +20,14 @@ export const StyledLabel = styled.label`
 position: relative;
 display:grid;
 gap:10px;
-color:gainsboro;
+/* color:gainsboro; */
+color: navy;
 `;
 
 export const StyledField = styled(Field)`
 border-radius: 5px;
 padding: 5px 10px;
-width: 250px;
+max-width: 100%;
 
 &:hover{
     border: 2px solid darkblue;
@@ -61,6 +63,8 @@ right: 5%;
 `;
 
 export const TitleContactForm = styled.h2`
+text-align: center;
 text-transform: uppercase;
-color: white;
+/* color: white; */
+color: navy;
 `;
