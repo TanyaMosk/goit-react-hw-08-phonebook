@@ -7,8 +7,6 @@ import Error from '../Error';
 import { useState } from "react";
 import { FormLabel } from "@mui/material";
 
-
-
 const ContactList = () => {
   const dispatch = useDispatch();  
   const [changes, setChanges] = useState(null);  
@@ -19,7 +17,7 @@ const ContactList = () => {
 
   const handleChanges = (e, id) => {
     e.preventDefault();
-    setChanges(null);    
+    setChanges(null);     
     dispatch(updateContact({
       contactId: id,
       name: e.currentTarget.elements.name.value,
