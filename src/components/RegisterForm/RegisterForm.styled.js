@@ -14,9 +14,13 @@ background-color: transparent;
    margin-top: 40px;
 `;
 
-export const Form = styled.form` 
-  
+export const Form = styled.form`   
 display: flex;
 flex-direction: column;
 gap: 10px;
 `;
+
+export const TitleRegister = styled.h2`
+font-family: cursive;
+color: navy;
+`

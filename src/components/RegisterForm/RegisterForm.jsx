@@ -1,7 +1,7 @@
 import { TextField, Button } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { register } from "redux/auth/operations";
-import { Form, FormWrapper } from "./RegisterForm.styled";
+import { Form, FormWrapper, TitleRegister } from "./RegisterForm.styled";
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ const RegisterForm = () => {
 
   return (
     <FormWrapper>
-     <h2>Registration</h2>
+     <TitleRegister>Registration</TitleRegister>
       <Form onSubmit={handleSubmit} autoComplete="off">
         <label>       
           <TextField sx={{margin: '20px'}} id="outlined-basic" label="Username" variant="outlined"  type="text" name="name"  />

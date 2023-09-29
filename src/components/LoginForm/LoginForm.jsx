@@ -1,7 +1,7 @@
 import { Button, TextField } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { logIn } from "redux/auth/operations";
-import { Form, FormWrapper } from "./LoginForm.styled";
+import { Form, FormWrapper, TitleLogin } from "./LoginForm.styled";
 
 const LoginForm = () => {
     const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const LoginForm = () => {
     
   return (
     <FormWrapper>
-      <h2>Login</h2>
+      <TitleLogin>Login</TitleLogin>
     <Form onSubmit={handleSubmit} autoComplete="off">
       <label >       
          <TextField sx={{margin: '20px'}} id="outlined-basic" label="Email" variant="outlined"  type="text" name="email"   />

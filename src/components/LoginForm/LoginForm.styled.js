@@ -20,3 +20,8 @@ display: flex;
 flex-direction: column;
 gap: 10px;
 `;
+
+export const TitleLogin = styled.h2`
+font-family: cursive;
+color: navy;
+`
