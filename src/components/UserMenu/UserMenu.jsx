@@ -3,7 +3,7 @@ import { useAuth } from "hooks";
 import { useDispatch } from "react-redux"
 import { logOut } from "redux/auth/operations";
 
-export const UserMenu = () => {
+const UserMenu = () => {
     const dispatch = useDispatch();
     const { user } = useAuth();    
     
@@ -24,3 +24,5 @@ export const UserMenu = () => {
         </List>
     )
 };
+
+export default UserMenu;

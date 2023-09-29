@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { logIn } from "redux/auth/operations";
 import { Form, FormWrapper } from "./LoginForm.styled";
 
-export const LoginForm = () => {
+const LoginForm = () => {
     const dispatch = useDispatch();
 
  const handleSubmit = e => {
@@ -34,3 +34,4 @@ export const LoginForm = () => {
   );
 };
 
+export default LoginForm;

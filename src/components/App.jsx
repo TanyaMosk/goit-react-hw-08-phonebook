@@ -1,11 +1,5 @@
 import { lazy, useEffect } from "react";
 import { useDispatch } from "react-redux";
-// import { selectError, selectIsLoading } from 'redux/contacts/selectors';
-// import { fetchContacts } from "redux/contacts/operations";
-// import Loader from './Loader';
-// import ContactList from './ContactList';
-// import ContactForm from './ContactForm';
-// import Filter from "./Filter";
 import { Route, Routes } from "react-router-dom";
 import { GlobalStyle } from "./GlobalStyle";
 import { Layout } from "./Layout";
@@ -20,13 +14,7 @@ const Login = lazy(() => import('../pages/Login'));
 const Contacts = lazy(() => import('../pages/Contacts'));
 
 export const App = () => {   
-  const dispatch = useDispatch();
-  // const error = useSelector(selectError);
-  // const loading = useSelector(selectIsLoading);
-    
-  // useEffect(() => {
-  //       dispatch(fetchContacts())
-  //   }, [dispatch]);
+  const dispatch = useDispatch(); 
 
   const {isRefreshing} = useAuth();
        
@@ -47,16 +35,9 @@ export const App = () => {
         <Route path="/contacts" element={
           <PrivateRoute redirectTo="/login" component={<Contacts/>}/>}/>
       </Route>
-      </Routes>
-      <GlobalStyle/>
-      </> 
-
-    //  <>      
-    //   <ContactForm />      
-    //   <Filter />
-    //   {loading && !error ? <Loader /> : <ContactList />} 
-    //   <GlobalStyle/>
-    // </>
+    </Routes>
+    <GlobalStyle/>
+    </>    
   )
 };
 

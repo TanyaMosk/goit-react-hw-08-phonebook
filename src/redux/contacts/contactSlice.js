@@ -35,8 +35,7 @@ const handleUpdateContactFulfilled = (state, action) => {
   
   const index = state.contacts.items.findIndex(contact => contact.id === action.payload.id);
     
-    state.contacts.items[index] = action.payload;
-    // state.contacts.items = state.contacts.items.find(contact => contact.id === action.payload.id);
+    state.contacts.items[index] = action.payload;   
 };
 
 const contactSlise = createSlice({

@@ -1,7 +1,7 @@
 import { Box, ButtonGroup, Button } from "@mui/material"
 import { NavLink } from "react-router-dom"
 
-export const AuthNav = () => {
+const AuthNav = () => {
   return (
     <Box sx={{margin:'auto 30px'}}>
       <ButtonGroup
@@ -15,3 +15,5 @@ export const AuthNav = () => {
     </Box>
   )
 };
+
+export default AuthNav;

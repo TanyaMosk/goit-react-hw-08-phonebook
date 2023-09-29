@@ -2,7 +2,7 @@ import { List, ListItem, Typography } from "@mui/material";
 import { useAuth } from "hooks"
 import { NavLink } from "react-router-dom"
 
-export const Navigation = () => {
+const Navigation = () => {
     const { isLoggedIn } = useAuth();
 
     return (
@@ -24,3 +24,5 @@ export const Navigation = () => {
         </List>                
     )
 };
+
+export default Navigation;

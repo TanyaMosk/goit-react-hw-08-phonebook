@@ -19,7 +19,7 @@ const ContactList = () => {
 
   const handleChanges = (e, id) => {
     e.preventDefault();
-    setChanges(null);
+    setChanges(null);    
     dispatch(updateContact({
       contactId: id,
       name: e.currentTarget.elements.name.value,
