@@ -7,7 +7,6 @@ flex-direction: column;
 gap: 5px;
 padding-left: 20px;
 list-style: square;
-/* color: gainsboro; */
 color: navy;
 width: 500px;
 margin: auto;
@@ -26,7 +25,6 @@ margin: 0;
 padding: 5px;
 text-transform: capitalize;
 font-size: 18px;
-/* color: gainsboro; */
 color: navy;
 `;
 
@@ -59,13 +57,11 @@ export const IconClose = styled(GrClose)`
 `;
 
 export const TotalText = styled.p`
-/* color: lightsteelblue; */
 text-align: center;
 color: navy;
 `;
 
 export const TitleList = styled.h2`
-/* color: gainsboro; */
 color: navy;
 text-align: center;
 `; 
@@ -76,12 +72,12 @@ gap: 15px;
 `;
 
 export const FormLabel = styled.label`
-/* width: 100px; */
+
 `;
 
 export const FormInput = styled.input`
-/* width: 100px; */
-/* border: none; */
+width: 190px;
+
 background-color: transparent;
 border-radius: 5px;
 border: 1px solid navy;

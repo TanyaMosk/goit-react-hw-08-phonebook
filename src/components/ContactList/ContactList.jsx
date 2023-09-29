@@ -8,12 +8,14 @@ import { useState } from "react";
 import { FormLabel } from "@mui/material";
 
 
+
 const ContactList = () => {
   const dispatch = useDispatch();  
   const [changes, setChanges] = useState(null);  
 
   const contacts = useSelector(selectVisibleContacts);  
   const error = useSelector(selectError);
+  
 
   const handleChanges = (e, id) => {
     e.preventDefault();
@@ -22,12 +24,11 @@ const ContactList = () => {
       contactId: id,
       name: e.currentTarget.elements.name.value,
       number: e.currentTarget.elements.number.value
-    }));
-    console.log(id);
+    }));   
   }; 
   
   return (
-    <>
+    <>      
       {error ? <Error /> : null}
       {(contacts.length !== 0)
         ? (<>
@@ -80,39 +81,3 @@ const ContactList = () => {
 
 export default ContactList;
 
- // <>
-    //   {error ? <Error/> : null}
-    //   {(contacts.length !== 0 )
-    //   ? (<>
-    //       <TotalText>Total contacts: {contacts.length}</TotalText>
-    // <List>
-    //   {contacts.map(({id, name, number}) => (        
-    //     <li key={id}>
-    //       <WrapItem>
-    //         <WrappText>
-    //         <Text>{name}</Text>
-    //         <Text> {number}</Text>
-    //         </WrappText>
-    //         <button key={id} onClick={()=>changeContact(id)}>
-    //           <MdDriveFileRenameOutline/>Edit 
-    //         </button>           
-    //         <DeleteBtn onClick={() => dispatch(deleteContact(id))}>
-    //           <IconClose />
-    //         </DeleteBtn>
-    //       </WrapItem>
-    //       {changes && <form>
-    //           <label>               
-    //             <input type="name" name="name" defaultValue={name} />
-    //           </label>
-    //           <label>               
-    //             <input type="text" name="number" defaultValue={number} />
-    //           </label>
-    //           <button onClick={(e)=>handleChanges(e, id)} >Change</button>
-    //         </form> }
-    //     </li>
-    //   ))}
-    // </List>
-    //   </>)
-    //     : (error ? null : <TitleList>Sorry, you have no saved contacts.</TitleList>)
-    //      }        
-    // </>

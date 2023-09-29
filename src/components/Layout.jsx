@@ -9,9 +9,7 @@ export const Layout = () => {
             <Suspense fallback={null}>
                 <Outlet />
             </Suspense>
-        </div>
-           
-  
+        </div>  
     );
 };
 

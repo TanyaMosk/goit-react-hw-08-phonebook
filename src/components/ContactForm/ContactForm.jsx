@@ -29,7 +29,7 @@ const ContactForm = () => {
           number: '',
             }}
             validationSchema={SignupSchema}
-        onSubmit={(values, actions) => {            
+            onSubmit={(values, actions) => {            
             dispatch(addContact({...values}));
             actions.resetForm();          
           }}
@@ -57,7 +57,7 @@ const ContactForm = () => {
                   
         <Button type="submit">Add contact</Button>
       </StyledForm>
-      </Formik>
+      </Formik>      
     </>
     )
 }

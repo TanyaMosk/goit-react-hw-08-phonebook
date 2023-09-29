@@ -19,8 +19,7 @@ export const UserMenu = () => {
                 <Typography>Welcome, {user.email} </Typography>
                 </ListItem>
             <ListItem>
-                <Button type="button" onClick={handleLogOut} variant="contained">Logout</Button>
-                {/* <button type="button" onClick={handleLogOut}>Logout</button> */}
+                <Button type="button" onClick={handleLogOut} variant="contained">Logout</Button>                
             </ListItem>
         </List>
     )

@@ -21,19 +21,13 @@ export const RegisterForm = () => {
     <FormWrapper>
      <h2>Registration</h2>
       <Form onSubmit={handleSubmit} autoComplete="off">
-        <label>
-            {/* User name
-          <input type="text" name="name" /> */}
+        <label>       
           <TextField sx={{margin: '20px'}} id="outlined-basic" label="Username" variant="outlined"  type="text" name="name"  />
         </label>
-        <label>
-            {/* Email
-          <input type="email" name="email" /> */}
+        <label>           
           <TextField sx={{margin: '20px'}} id="outlined-basic" label="Email" variant="outlined"  type="text" name="email"   />
         </label>
-        <label>
-            {/* Password
-          <input type="password" name="password" /> */}
+        <label>       
           <TextField sx={{margin: '20px'}} id="outlined-basic" label="Password" variant="outlined"  type="password" name="password"  />
         </label>
         <Button sx={{margin: 'auto'}} type="submit"  variant="contained">Register</Button>
